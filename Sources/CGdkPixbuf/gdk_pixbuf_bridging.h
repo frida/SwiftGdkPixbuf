@@ -4,8 +4,10 @@ struct _GdkPixbufSimpleAnimClass {};
 
 #define GLIB_DISABLE_DEPRECATION_WARNINGS
 #define GDK_PIXBUF_ENABLE_BACKEND
+#if !defined(_WIN32)
 #include <unistd.h>
 #include <termios.h>
+#endif
 #include <sys/types.h>
 #include <gdk-pixbuf/gdk-pixbuf.h>
 #include <gdk-pixbuf/gdk-pixbuf-loader.h>
